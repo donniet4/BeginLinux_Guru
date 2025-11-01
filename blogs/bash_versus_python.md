@@ -200,9 +200,9 @@ When you run the script, just type in the instance ID the for the first prompt, 
 
 
 
-<div>
+
 [Buy The Ultilmate Linux Shell Scripting Guide now, via my Amazon link!](https://www.amazon.com/Ultimate-Linux-Shell-Scripting-Guide/dp/1835463576?&linkCode=ll1&tag=civicsandpolitic&linkId=4eb34b1ccafd9edcf33aa8f61e4cbb31&language=en_US&ref_=as_li_ss_tl)
-</div>
+
 
 ## Conclusion
 
