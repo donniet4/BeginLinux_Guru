@@ -1,16 +1,7 @@
-
-
-
-
-
-
-
-
-
-
-# When Not to Use Python: The Case for Bash Shell Scripting for Linux and Unix Administrators
+# When Not to Use Python: The Case for Bash Shell Scripting in Cloud Infrastructure
 
 ## Introduction
+
 Python is a great programming language, and you can do a lot of awesome stuff with it. For example, if you need to create applications that process complex data sets or to perform complex math operations, Python is a great choice. Python also allows you to create multi-threaded applications that run very efficiently. However, you might at times find that Python is more than you need, or more than you can easily learn. So, for jobs that don’t rise to the level of complexity for which Python would be ideal, which would include many administrative tasks on Linux, Unix, or Unix-like servers and devices, you might want to consider shell scripting instead. Let’s look at some specific reasons.
 
 ## Shells are universal, Python isn’t
@@ -207,11 +198,9 @@ fi
 
 When you run the script, just type in the instance ID the for the first prompt, and then type either “start” or “stop” at the second prompt. This is a lot easier than typing the entire aws command every time you need to start or stop an instance. You can automate most any other aws task in the same manner.
 
-
-
+![ultimate_shell_scripting_book_cover.png](ultimate_shell_scripting_book_cover.png)
 
 [Buy The Ultilmate Linux Shell Scripting Guide now, via my Amazon link!](https://www.amazon.com/Ultimate-Linux-Shell-Scripting-Guide/dp/1835463576?&linkCode=ll1&tag=civicsandpolitic&linkId=4eb34b1ccafd9edcf33aa8f61e4cbb31&language=en_US&ref_=as_li_ss_tl)
-
 
 ## Conclusion
 
