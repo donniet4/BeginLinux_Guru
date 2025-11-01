@@ -1,4 +1,4 @@
-# When Not to Use Python: The Case for Bash Shell Scripting in Cloud Infrastructure
+# When Not to Use Python: The Case for Bash Shell Scripting
 
 ## Introduction
 
