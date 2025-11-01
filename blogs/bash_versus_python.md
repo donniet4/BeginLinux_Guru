@@ -1,5 +1,13 @@
 
 
+
+
+
+
+
+
+
+
 ## When Not to Use Python: The Case for Bash Shell Scripting
 
 Python is a great programming language, and you can do a lot of awesome stuff with it. For example, if you need to create applications that process complex data sets or to perform complex math operations, Python is a great choice. Python also allows you to create multi-threaded applications that run very efficiently. However, you might at times find that Python is more than you need, or more than you can easily learn. So, for jobs that don’t rise to the level of complexity for which Python would be ideal, which would include many administrative tasks on Linux, Unix, or Unix-like servers and devices, you might want to consider shell scripting instead. Let’s look at some specific reasons.
