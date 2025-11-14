@@ -1,4 +1,4 @@
-# When Not to Use Python: The Case for Bash Shell Scripting in Cloud Infrastructure
+# When Not to Use Python: The Case for Bash Shell Scripting for Linux Administrators
 
 ## Introduction
 
@@ -108,9 +108,9 @@ I think you see that doing this with shell scripting is way faster and easier.
 
 Finally, let’s see how shell scripting can help us with cloud operations.
 
-## Shell scripting for cloud operations
+## Shell scripting for web server administration
 
-Let’s say that you have a web server that’s running on either a VPS or a remote IoT device, and you want a list of IP Addresses of clients that have accessed it, along with status codes and number of bytes transferred. Here’s a Python script that you might use for that:
+Let’s say that you have a web server that’s running on a VPS, remote IoT device, or on premises. And, you want a list of IP Addresses of clients that have accessed it, along with status codes and number of bytes transferred. Here’s a Python script that you might use for that:
 
 ```
 #!/usr/bin/python
