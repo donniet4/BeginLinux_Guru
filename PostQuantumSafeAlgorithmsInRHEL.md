@@ -33,7 +33,7 @@ For the first test, I'll boot up my Kali Linux virtual machine, and use the `ssh
 . . .
 ```
 
-I can't show you the entire output, but I can show you what you need to see.  First, you see that AlmaLinux 10.1 is running OpenSSH version 9.9.  It's not the newest version of OpenSSH, but it's new enough to have the newest PQS algorithms.  Under the `# key exchange algorithms` line, you see that the first key exchange (`kex`) algorithm listed is the `mlkem768x25519-sha256` algorithm.  This is a hybrid algorithm that combines the PQS `mlkem768` algorithm that's approved by the U.S. National Institute of Standards and Technology with the non-PQS `curve 25519` algorithm.  Using this hybrid approach doesn't allow non-PQS clients to log into this machine.  It's just that some people still don't have complete confidence in the security of PQS algorithms. So, they created hybrid algorithms that expect a key exchange to be successful for both the PQS and non-PQS algorithms.  In this case, if a key exchange successfully completes for the `mlkem768` algorithm but doesn't successfully complete for the `curve25519` algorithm, then the key exchange fails.  
+I can't show you the entire output, but I can show you what you need to see.  First, you see that AlmaLinux 10.1 is running OpenSSH version 9.9.  It's not the newest version of OpenSSH, but it's new enough to have the newest PQS algorithms.  Under the `# key exchange algorithms` line, you see that the first key exchange (`kex`) algorithm listed is the `mlkem768x25519-sha256` algorithm.  This is a hybrid algorithm that combines the PQS `mlkem768` algorithm that's approved by the U.S. National Institute of Standards and Technology with the non-PQS `curve 25519` algorithm.  Using this hybrid approach doesn't allow non-PQS clients to log into this machine.  It's just that some people still don't have complete confidence in the security of PQS algorithms. So, they created hybrid algorithms that expect a key exchange to be successful for both the PQS and non-PQS components.  In this case, if a key exchange successfully completes for the `mlkem768` algorithm but doesn't successfully complete for the `curve25519` algorithm, then the key exchange fails.  
 
 The next two lines show that the `curve25519` non-PQS algorithm is enabled, which is what allows non-PQS clients to log in.  If all of the clients on your network that will log into this server are running PQS algorithms, then you'll want to disable `curve25519`.  (Showing you how to do that is beyond the scope of this article.)
 
@@ -99,12 +99,11 @@ Here, we're using the `mldsa87` PQS algorithm to create a key for a root-level c
 
 ## Understanding CNSA 2.0
 
-So, why is this important?  It's just that the newest 2.0 version of the Commercial National Security Algorithm (CNSA 2.0) requirements from the U.S. National Security Agency dictate that beginning in 2026, everybody must begin transitioning to PQS algorithms.  It will be a long process, and the transition must be complete by the end of 2031.
+So, why is this important?  It's just that the newest 2.0 version of the Commercial National Security Algorithm (CNSA 2.0) requirements from the U.S. National Security Agency (NSA) and National Institute for Standards and Technology (NIST) dictate that beginning in 2026, everybody must begin transitioning to PQS algorithms.  It will be a long process, and the transition must be complete by the end of 2031.
 
 ## Simplified Configuration
 
 Unlike the RHEL 10.0 distros, the RHEL 10.1 distros don't require you to reconfigure the system to enable the PQS algorithms.  In the 10.1 distros, the PQS algorithms are already enabled by default.  However, you'll still want to do some reconfiguration to disable the weak and broken algorithms that are still enabled.
-
 
 ![mastering_linux_security.jpg](mastering_linux_security.jpg)
 
