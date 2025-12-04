@@ -2,7 +2,7 @@
 
 by Donald A. Tevault
 
-All right, folks.  I have great news for anyone who uses either Red Hat Enterprise Linux (RHEL) or one of the free-of-charge RHEL clones such as Rocky Linux and AlmaLinux.  It's that Post Quantum Safe (PQS) encryption algorighms are now enabled by default in the newly-released 10.1 versions.  When the RHEL 10.0 distros were released in the middle of 2025, the PQS algorithms were there, but they were marked as "experimental".  So, you had to jump through some hoops to enable them.  Now though, in version 10.1, PQS is enabled by default and is ready for production.  In the following demos, I'll prove to you that PQS key exchange is enabled in OpenSSH, and that you can create a PQS-ready security key with OpenSSL.
+All right, folks.  I have great news for anyone who uses either Red Hat Enterprise Linux (RHEL) or one of the free-of-charge RHEL clones such as Rocky Linux and AlmaLinux.  It's that Post Quantum Safe (PQS) encryption algorithms are now enabled by default in the newly-released 10.1 versions.  When the RHEL 10.0 distros were released in the middle of 2025, the PQS algorithms were there, but they were marked as "experimental".  So, you had to jump through some hoops to enable them.  Now though, in version 10.1, PQS is enabled by default and is ready for production.  In the following demos, I'll prove to you that PQS key exchange is enabled in OpenSSH, and that you can create a PQS-ready security key with OpenSSL.
 
 ## Testing OpenSSH
 
