@@ -38,12 +38,13 @@ I can't show you the entire output, but I can show you what you need to see.  Fi
 The next two lines show that the `curve25519` non-PQS algorithm is enabled, which is what allows non-PQS clients to log in.  If all of the clients on your network that will log into this server are running PQS algorithms, then you'll want to disable `curve25519`.  (Showing you how to do that is beyond the scope of this article.)
 
 Something that I can't show you here is that `ssh-audit` displays its output with a color-code system.  Algorithms that display in green type are considered as okay, and algorithms that display in red type are consider as broken, and should be disabled.  What I find very curious is that every Linux or BSD distro that I've ever tested has a lot of broken algorithms still enabled.  This even includes the newest RHEL 10.1 distros.  For example, here's one of the algorithms that show up in red on my AlmaLinux 10.1 machine:
-<span style="color:red">
+
 ```bash
+<span style="color:red">
 (kex) ecdh-sha2-nistp256                    -- [fail] using elliptic curves that are suspected as being backdoored by the U.S. National Security Agency
-                                            `- [info] available since OpenSSH 5.7, Dropbear SSH 2013.62
+</span>                                            `- [info] available since OpenSSH 5.7, Dropbear SSH 2013.62
 ```
-</span>
+
 Yikes!  You see what that says?  It says that there's a suspected back door in this algorithm that could grant access to the U.S. National Security Agency.  There are several more algorithms like this, and you definitely want to disable all of them.  (Again, showing you how is beyond the scope of this article.)
 
 The second way to test the OpenSSH setup is to just log in to the machine from a client that's using OpenSSH 10.2 or better.  For example, here's how it looks when I log into an older AlmaLinux 9.7 server from my OpenMandriva ROME workstation:
